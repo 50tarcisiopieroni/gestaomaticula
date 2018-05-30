@@ -1,12 +1,15 @@
 
 <?php
     require_once 'Base.php';
-	require_once('Cls_Pessoa.php');
+	require_once 'Cls_Pessoa.php';
 
 	$p = new Pessoa();
 
-	$Html = $p->GetFormCadastro();
+	$pagina = new Base();
+	
+	$pagina->SetMeio($p->GetFormCadastro());
 
-	Base::gerarHTML($Html);
+	$pagina->GerarHTML();
+
 ?>
 

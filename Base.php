@@ -12,50 +12,58 @@
  * @author Tarcisio
  */
 class Base {
-   
-  static public function gerarHTML($meio){
 
-    $Html = "<!DOCTYPE html>
-            <html>";
+        private $header;
+        private $top;
+        private $meio;
+        private $script;
 
-    $Html.= Base::header();
-    $Html.= Base::top();
-    $Html.= Base::menu();
+        public function __construct(){
 
-    $Html.= "<div class='meio'>";
-    $Html.= $meio;
-    $Html.= "</div>";
-    $Html.= " </body>
-             </html>";
+                $this->header = "<head>" . PHP_EOL .
+                "<link rel='shortcut icon' href='image/favicon.ico' />". PHP_EOL .
+                "<title>Gestão de matricula</title>" . PHP_EOL .
+                "<link rel='stylesheet' href='style.css'>" . PHP_EOL .
+                "<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono' rel='stylesheet'>" . PHP_EOL .
+                "</head>" . PHP_EOL ;
 
-    echo $Html;
-  }
+                $this->menu = "<dir class='menu'>" . PHP_EOL .
+                        "<ul>" . PHP_EOL .
+                        "  <li><a href='index.php'>Principal</a></li>" . PHP_EOL .
+                        "  <li><a href='cad_aluno.php'>Cadastrar Aluno</a></li>" . PHP_EOL .
+                        "</ul>" . PHP_EOL .
+                        "</dir>" . PHP_EOL;
 
-  static private function header(){
-    $Html = "<head>" . PHP_EOL .
-            "<title>Gestão de matricula</title>" . PHP_EOL .
-            "<link rel='stylesheet' href='style.css'>" . PHP_EOL .
-            "<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono' rel='stylesheet'>" . PHP_EOL .
-            "</head>" . PHP_EOL ;
-    return $Html;
-  } 
-  static private function menu(){
-       $Html = "<dir class='menu'>" . PHP_EOL .
-               "<ul>" . PHP_EOL .
-               "  <li><a href='index.php'>Principal</a></li>" . PHP_EOL .
-               "  <li><a href='cad_aluno.php'>Cadastrar Aluno</a></li>" . PHP_EOL .
-               "</ul>" . PHP_EOL .
-               "</dir>" . PHP_EOL;
-        return $Html;
-  }
+                $this->top = "<div class='banner'>" . PHP_EOL .
+                        "<h1>Matricula</h1>" . PHP_EOL .
+                        "<h2>Software de matriculas</h2>" . PHP_EOL .
+                        "</div>" . PHP_EOL;
+        }
+        public function gerarHTML(){
 
-  static private function top(){
-        $Html = "<div class='banner'>" . PHP_EOL .
-                "<h1>Matricula</h1>" . PHP_EOL .
-                "<h2>Software de matriculas</h2>" . PHP_EOL .
-                "</div>" . PHP_EOL;
-        return $Html;
-   }
+                $Html = "<!DOCTYPE html>
+                        <html>";
+
+                $Html.= $this->header;
+                $Html.= $this->top;
+                $Html.= $this->menu;
+
+                $Html.= "<div class='meio'>";
+                $Html.= $this->meio;
+                $Html.= "</div>";
+
+                $Html.= $this->script;
+
+                $Html.= " </body>
+                        </html>";
+
+                echo $Html;
+        }
+
+        public function SetMeio($html){
+                $this->meio = $html;
+        }
+
  }
 
 ?>

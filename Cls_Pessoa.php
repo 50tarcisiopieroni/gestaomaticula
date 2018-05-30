@@ -8,10 +8,8 @@
             private $sobrenome;
             private $campos;
 
-            public function __construct() {
-                               
-                ;	
-            }
+            public function __construct() {}
+
             public function GetCampos(){
                     return $this->campos;
             }
@@ -22,11 +20,13 @@
                         // No atribudo extra é necessário preencher
                         // exatamento o HTML
                         $formulario->AddCampoTexto("NomeCompleto","NomeCompleto","","","");
+                        $formulario->AddCampoData("Data da matrícula","date","dt_Matricula",date('Y-m-d'),"");
 
                         /*
                         "Data da matrícula;date;dt_Matricula;".date('Y-m-d')."; ", 
                         "Data de inserção no curso;date;dt_Inserção;;",                
-                         Identificação do aluno: 
+                         
+                        Identificação do aluno: 
                         "NomeCompleto;text;nm_pessoa;;", 
                         "Sexo;radio;genero;Masculino; Masculino ",
                         " ;radio;genero;Feminino; Feminino",
@@ -43,13 +43,16 @@
                         Cep: 
                         Cidade: 
                         Uf: 
+                        
                         Telefone residencial: 
                         Telefone p/ recado: 
                         Em caso de emergencia falar com: 
                         Telefone:  
+                        
                         Nome escola onde estuda: 
                         Série: 
                         Turno    
+                        
                         Filiação:
                         Nome da mãe:
                         Celular: 
