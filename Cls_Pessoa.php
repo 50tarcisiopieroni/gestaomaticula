@@ -19,13 +19,14 @@
                         // texto;type;name;atributos extras
                         // No atribudo extra é necessário preencher
                         // exatamento o HTML                        
-                        $formulario->AddCampoTexto("NomeCompleto",";nm_pessoa","nm_pessoa","","");
+                        $formulario->AddCampoTexto("NomeCompleto",";nm_pessoa","nm_pessoa");
                         $formulario->AddCampoRadio("Sexo","sexo","sexo","masculino","Masculino");
                         $formulario->AddCampoRadio("","sexo","sexo","feminino","feminino");
                         $formulario->AddCampoRadio("","sexo","sexo","outro","outro");
-                        $formulario->AddCampoRadio("Data de nascimento","dt_nascimento","dt_nascimento","","");
-                        $formulario->AddCampoTexto("Narutalidade","naturalidade","naturalidade","","");
-                        
+                        $formulario->AddCampoData("Data de nascimento","dt_nascimento","dt_nascimento","");
+                        $formulario->AddCampoTexto("Narutalidade","naturalidade","naturalidade");
+                        $formulario->AddCampoDataList("Uf Naturalidade","uf_naturalidade",$formulario->estados);
+
 
                         /*
                         "",                
