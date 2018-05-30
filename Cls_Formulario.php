@@ -60,7 +60,7 @@
 				$this->campos[] = $Html;
 			}
 		
-		public function AddCampoDataList(string $preDescricao, string $id, $value)
+		public function AddCampoSelect(string $preDescricao, string $id, $value)
 		{
 		$Html = "<tr>". PHP_EOL .
 				"<td>".$preDescricao."</td>" . PHP_EOL.
