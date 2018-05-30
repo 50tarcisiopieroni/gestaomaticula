@@ -40,13 +40,35 @@
 		}
 
 		public function AddCampoTexto(string $preDescricao, string $name, string $id, string $value, 
-							string $posDescricao)
+							    	string $posDescricao)
 		{
 			$Html = "<tr>". PHP_EOL .
 					"<td>".$preDescricao."</td>" . PHP_EOL.
 					"<td><input type='text' name='". $name ."' id='".$id."' value='".$value."' ></td>". $posDescricao .
 					"</tr>";
 					
+			$this->campos[] = $Html;
+		}
+
+		public function AddCampoRadio(string $preDescricao, string $name, string $id, string $value, 
+									string $posDescricao)
+		{
+			$Html = "<tr>". PHP_EOL .
+					"<td>".$preDescricao."</td>" . PHP_EOL.
+					"<td><input type='radio' name='". $name ."' id='".$id."' value='".$value."' ></td>". $posDescricao .
+					"</tr>";
+			
+			$this->campos[] = $Html;
+		}
+
+		public function AddCampoData(string $preDescricao, string $name, string $id, string $value, 
+		string $posDescricao)
+		{
+		$Html = "<tr>". PHP_EOL .
+				"<td>".$preDescricao."</td>" . PHP_EOL.
+				"<td><input type='date' name='". $name ."' id='".$id."' value='".$value."' ></td>". $posDescricao .
+				"</tr>";
+
 			$this->campos[] = $Html;
 		}
 	}

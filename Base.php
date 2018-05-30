@@ -33,22 +33,13 @@ class Base {
 
   static private function header(){
     $Html = "<head>" . PHP_EOL .
-            "<title>Aprendendo CSS</title>" . PHP_EOL .
+            "<title>Gestão de matricula</title>" . PHP_EOL .
             "<link rel='stylesheet' href='style.css'>" . PHP_EOL .
             "<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto+Mono' rel='stylesheet'>" . PHP_EOL .
             "</head>" . PHP_EOL ;
     return $Html;
   } 
   static private function menu(){
-     /* $Html = "<div class='menu'>" . PHP_EOL .
-                "<ul>" . PHP_EOL .
-                     "<li><a  href='index.php'>Home</a></li>" . PHP_EOL .
-                     "<li><a  href='Cad_Aluno.php'>Cadastrar Aluno</a></li>" . PHP_EOL .
-                     "<div class='clear'><div>" . PHP_EOL .
-                "</ul>" . PHP_EOL .
-              "<div class='clear'></div>" . PHP_EOL .
-              "</div>" . PHP_EOL 
-              ;*/
        $Html = "<dir class='menu'>" . PHP_EOL .
                "<ul>" . PHP_EOL .
                "  <li><a href='index.php'>Principal</a></li>" . PHP_EOL .
@@ -59,13 +50,6 @@ class Base {
   }
 
   static private function top(){
-    /*$Html = "<div id='fundo'>" . PHP_EOL .
-       		  "<br>" . PHP_EOL .
-       		  "<h1 class='title'>Cadastro de matricula</h1>" . PHP_EOL .
-       		  "<div class='clear'><div>" . PHP_EOL .
-             "</div>" . PHP_EOL
-             ;
-    */
         $Html = "<div class='banner'>" . PHP_EOL .
                 "<h1>Matricula</h1>" . PHP_EOL .
                 "<h2>Software de matriculas</h2>" . PHP_EOL .
