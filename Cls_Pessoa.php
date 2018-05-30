@@ -18,20 +18,24 @@
 
                         // texto;type;name;atributos extras
                         // No atribudo extra é necessário preencher
-                        // exatamento o HTML
-                        $formulario->AddCampoTexto("NomeCompleto","NomeCompleto","","","");
-                        $formulario->AddCampoData("Data da matrícula","date","dt_Matricula",date('Y-m-d'),"");
+                        // exatamento o HTML                        
+                        $formulario->AddCampoTexto("NomeCompleto",";nm_pessoa","nm_pessoa","","");
+                        $formulario->AddCampoRadio("Sexo","sexo","sexo","masculino","Masculino");
+                        $formulario->AddCampoRadio("","sexo","sexo","feminino","feminino");
+                        $formulario->AddCampoRadio("","sexo","sexo","outro","outro");
+                        $formulario->AddCampoRadio("Data de nascimento","dt_nascimento","dt_nascimento","","");
+                        $formulario->AddCampoTexto("Narutalidade","naturalidade","naturalidade","","");
+                        
 
                         /*
-                        "Data da matrícula;date;dt_Matricula;".date('Y-m-d')."; ", 
-                        "Data de inserção no curso;date;dt_Inserção;;",                
+                        "",                
                          
                         Identificação do aluno: 
-                        "NomeCompleto;text;nm_pessoa;;", 
-                        "Sexo;radio;genero;Masculino; Masculino ",
-                        " ;radio;genero;Feminino; Feminino",
-                        " ;radio;genero;Outro; Outro",
-                        "Data de Nascimento;date;dt_nascimento;;",
+                        ok"NomeCompleto;text;nm_pessoa;;", 
+                        ok"Sexo;radio;genero;Masculino; Masculino ",
+                        ok" ;radio;genero;Feminino; Feminino",
+                        ok" ;radio;genero;Outro; Outro",
+                        ok"Data de Nascimento;date;dt_nascimento;;",
                         "Naturalidade;text;Naturalidade;;"
                         
         
