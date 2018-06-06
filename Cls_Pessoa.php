@@ -25,8 +25,9 @@
                         $formulario->AddCampoRadio("","sexo","sexo","outro","outro");
                         $formulario->AddCampoData("Data de nascimento","dt_nascimento","dt_nascimento","");
                         $formulario->AddCampoTexto("Narutalidade","naturalidade","naturalidade");
-                        $formulario->AddCampoDataList("Uf Naturalidade","uf_naturalidade",$formulario->estados);
-
+                        $formulario->AddCampoSelect("Uf Naturalidade","uf_naturalidade",$formulario::$estados);
+                        $formulario->AddCampoTexto("Nacionalidade","nacionalidade","nacionalidade");
+                        $formulario->AddCampoTexto("Religião","religiao","religiao");
 
                         /*
                         "",                
@@ -37,12 +38,11 @@
                         ok" ;radio;genero;Feminino; Feminino",
                         ok" ;radio;genero;Outro; Outro",
                         ok"Data de Nascimento;date;dt_nascimento;;",
-                        "Naturalidade;text;Naturalidade;;"
+                        ok"Naturalidade;text;Naturalidade;;"                        
+                        okUf: 
+                        okNacionalidade:
+                        okReligião: 
                         
-        
-                        Uf: 
-                        Nacionalidade:
-                        Religião: 
                         Endereço:       
                         Bairro:  
                         Cep: 

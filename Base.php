@@ -30,13 +30,15 @@ class Base {
                 $this->menu = "<dir class='menu'>" . PHP_EOL .
                         "<ul>" . PHP_EOL .
                         "  <li><a href='index.php'>Principal</a></li>" . PHP_EOL .
-                        "  <li><a href='cad_aluno.php'>Cadastrar Aluno</a></li>" . PHP_EOL .
+                        "  <li><a href='cad_aluno.php'>Cadastrar aluno</a></li>" . PHP_EOL .
+                        "  <li><a href='#'>Gerenciar matricula</a></li>" . PHP_EOL .
                         "</ul>" . PHP_EOL .
                         "</dir>" . PHP_EOL;
 
                 $this->top = "<div class='banner'>" . PHP_EOL .
-                        "<h1>Matricula</h1>" . PHP_EOL .
-                        "<h2>Software de matriculas</h2>" . PHP_EOL .
+                        "<img src='image/LOGO.png' class='logo'>". PHP_EOL .
+                        "<h1>Gestão de matricula</h1>" . PHP_EOL .
+                        "<h2>Software de gestão de matriculas</h2>" . PHP_EOL .
                         "</div>" . PHP_EOL;
         }
         public function gerarHTML(){

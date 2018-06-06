@@ -81,13 +81,14 @@ h2{
 	margin: 30px;
 	padding: 10px 10px 10px 10px;
 	border-style: groove;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .formulario table{
     width: 100%;
     margin: 0px;
-    padding: 0px;
+	padding: 0px;
+	border-spacing: 0;
 }
 
 .formulario input{
@@ -98,4 +99,40 @@ h2{
 .formulario select{
 	margin: 4px;
 	font-size: 12px;
+}
+
+.logo{
+	height: 100px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+td.topico{
+    border-bottom: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+	font-size: 18px;
+	padding:0;
+	background-color: transparent;
+}
+td {
+	background-color: rgb(253,253,253);
+	padding: 0px 0px 0px 10px;
+}
+
+.bt_cadastrar {
+	overflow: hidden;
+	margin: 30px 15% 0 0;
+}
+
+input[type="submit"] {
+    float: right;
+	clear: both;
+	height: 40px;
+    width: 90px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+    background: -webkit-linear-gradient(top, rgba(242,245,246,1) 0%,rgba(227,234,237,1) 37%,rgba(200,215,220,1) 100%);
 }

@@ -1,13 +1,17 @@
 
 <?php
     require_once 'Base.php';
-	require_once 'Cls_Pessoa.php';
-
-	$p = new Pessoa();
-
-	$pagina = new Base();
+	require_once 'Cls_Aluno.php';
 	
-	$pagina->SetMeio($p->GetFormCadastro());
+	$pagina = new Base();
+
+	if(isset($_POST['nm_pessoa']))
+	{
+		$a = new Aluno($_POST);
+	}else{
+		$pagina->SetMeio(Aluno::GetFormCadastro("Cad_Aluno.php"));
+	}
+
 
 	$pagina->GerarHTML();
 

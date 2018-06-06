@@ -1,7 +1,8 @@
 <?php
 
     require_once 'Base.php';
-                
-               
-    Base::gerarHTML($html = "");
+   
+    $pagina = new Base();            
+	$pagina->GerarHTML();
+
 ?>
