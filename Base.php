@@ -31,7 +31,7 @@ class Base {
                         "<ul>" . PHP_EOL .
                         "  <li><a href='index.php'>Principal</a></li>" . PHP_EOL .
                         "  <li><a href='cad_aluno.php'>Cadastrar aluno</a></li>" . PHP_EOL .
-                        "  <li><a href='#'>Gerenciar matricula</a></li>" . PHP_EOL .
+                        "  <li><a href='matriculas.php'>Gerenciar matricula</a></li>" . PHP_EOL .
                         "</ul>" . PHP_EOL .
                         "</dir>" . PHP_EOL;
 
